@@ -9,15 +9,31 @@
         text-align: center;
         padding-top: 50px;
       }
-      img {
-        cursor: pointer;
+      .button {
+        font-size: 18px;
+        color: #fff;
+        background-color: #0077cc;
+        text-decoration: none;
+        padding: 10px 20px;
+        margin: 10px;
+        border-radius: 5px;
+        display: inline-block;
+      }
+      .button:hover {
+        background-color: #005fa3;
       }
     </style>
   </head>
   <body>
     <h1>Modelo 3D en AR</h1>
-    <a href="https://raw.githubusercontent.com/eldecloh/EspinaIOS/main/espinasf.usdz" rel="ar">
-      <img src="https://via.placeholder.com/200" alt="Toca aquí para ver en AR">
+    <p>Selecciona tu sistema operativo para visualizar el modelo en realidad aumentada:</p>
+    <!-- Enlace para dispositivos iOS -->
+    <a href="https://raw.githubusercontent.com/eldecloh/ModeloEspina3d/main/espinasuaveusdz.usdz" rel="ar" class="button">
+      Ver en iOS
+    </a>
+    <!-- Enlace para dispositivos Android -->
+    <a href="https://raw.githubusercontent.com/eldecloh/ModeloEspina3d/main/espinasfandroid.glb" target="_blank" class="button">
+      Ver en Android
     </a>
   </body>
 </html>
