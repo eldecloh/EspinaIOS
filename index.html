@@ -34,19 +34,9 @@
         }
         // Detectar iOS
         else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-          document.getElementById("ios-button").style.display = "block"; // Muestra el botón de iOS
+          window.location.href = "ios.html"; // Redirige a la página para ios
         } else {
           alert("Sistema operativo no soportado para AR");
         }
       }
-    </script>
-  </head>
-  <body onload="detectOS()">
-    <h1>Modelo 3D en AR</h1>
-    <p>Redirigiendo según tu dispositivo...</p>
-    <!-- Botón para iOS (oculto por defecto) -->
-    <a id="ios-button" href="https://raw.githubusercontent.com/eldecloh/ModeloEspina3d/main/espinasuaveusdz.usdz" rel="ar" class="button" style="display: none;">
-      Ver en iOS
-    </a>
-  </body>
 </html>
