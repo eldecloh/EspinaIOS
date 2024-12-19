@@ -2,42 +2,27 @@
 <html lang="en">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modelo Espina 3D en AR</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        text-align: center;
-        padding-top: 50px;
-      }
-      .button {
-        font-size: 18px;
-        color: #fff;
-        background-color: #0077cc;
-        text-decoration: none;
-        padding: 10px 20px;
-        margin: 10px;
-        border-radius: 5px;
-        display: inline-block;
-      }
-      .button:hover {
-        background-color: #005fa3;
-      }
-    </style>
+    <title>Redirección según el sistema operativo</title>
     <script>
-      // Función para detectar el sistema operativo
-      function detectOS() {
+      // Función para detectar el sistema operativo y redirigir
+      function redirectBasedOnOS() {
         const userAgent = navigator.userAgent || navigator.vendor || window.opera;
-        
+
         // Detectar Android
         if (/android/i.test(userAgent)) {
-          window.location.href = "android.html"; // Redirige a la página para Android
+          window.location.href = "android.html"; // Página para Android
         }
         // Detectar iOS
         else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-          window.location.href = "ios.html"; // Redirige a la página para ios
+          window.location.href = "ios.html"; // Página para iOS
         } else {
-          alert("Sistema operativo no soportado para AR");
+          alert("Sistema operativo no soportado para esta funcionalidad.");
         }
       }
     </script>
+  </head>
+  <body onload="redirectBasedOnOS()">
+    <h1>Redirigiendo...</h1>
+    <p>Por favor espera mientras detectamos tu dispositivo.</p>
+  </body>
 </html>
